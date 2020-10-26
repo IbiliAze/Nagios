@@ -1,0 +1,6 @@
+[ /usr/local/nagios/etc/cgi.cfg ]
+
+authorized_for_all_services=nagiosadmin,ibi,readonly
+authorized_for_all_hosts=nagiosadmin,ibi,readonly
+
+authorized_for_read_only=readonly

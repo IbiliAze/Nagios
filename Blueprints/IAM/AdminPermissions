@@ -1,0 +1,15 @@
+[ /usr/local/nagios/etc/cgi.cfg ]
+
+
+authorized_for_system_information=nagiosadmin,admin
+authorized_for_configuration_information=nagiosadmin,admin
+
+authorized_for_system_commands=nagiosadmin,admin
+
+authorized_for_all_services=nagiosadmin,ibi,admin
+authorized_for_all_hosts=nagiosadmin,ibi,admin
+
+authorized_for_all_service_commands=nagiosadmin,admin
+authorized_for_all_host_commands=nagiosadmin,admin
+
+

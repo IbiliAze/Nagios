@@ -1,0 +1,19 @@
+[ /usr/local/nagios/etc/cgi.cfg ]
+
+use_authentication=0
+
+
+
+
+[ /etc/httpd/conf.d/nagios.conf ] #CentOS 
+[ /etc/apache2/sites-enabled/nagios.conf ] #Ubuntu
+
+#SSLRequireSSL
+#Order deny,allow
+#Deny from all
+#Allow from 127.0.0.1
+#Authname "Nagios Access"
+#AuthType Basic
+#AuthUserFile /usr/local/nagios/etc/htpasswd.users
+#Require valid-user 
+

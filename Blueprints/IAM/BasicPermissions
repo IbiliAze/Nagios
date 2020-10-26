@@ -1,0 +1,4 @@
+[ /usr/local/nagios/etc/cgi.cfg ]
+
+authorized_for_all_services=nagiosadmin,ibi
+authorized_for_all_hosts=nagiosadmin,ibi
