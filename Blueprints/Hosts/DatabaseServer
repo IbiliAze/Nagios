@@ -1,7 +1,7 @@
 define host {
-        use             linux-server
-        host_name       databaseServer
-        alias           dbSrv
-        address         18.208.128.70
-        contact_groups  <place holder>
+        use                     linux-server
+        host_name               databaseServer
+        alias                   dbSrv
+        address                 18.208.128.70
+        contact_groups          dbAdmins
 }

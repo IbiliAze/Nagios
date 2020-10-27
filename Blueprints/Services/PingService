@@ -5,8 +5,8 @@ define service {
         check_command           check_ping!100.0,20%!500.0,60%
         check_period            24x7
         check_interval          5
-        max_check_attemps       3
-        contact_groups          <place holder>
+        max_check_attempts      2
+        contact_groups          dbAdmins
         notification_interval   60
         notification_period     24x7
         notification_options    w,c,u,r

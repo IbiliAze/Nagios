@@ -1,0 +1,8 @@
+define contact {
+        contact_name                    Bob
+        use                             generic-contact
+        alias                           Database Adminstrator
+        email                           fuafuark@gmail.com
+        service_notification_commands   notify-service-by-email
+        host_notification_commands      notify-host-by-email
+}

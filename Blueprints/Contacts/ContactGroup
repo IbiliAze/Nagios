@@ -1,0 +1,5 @@
+define contactgroup {
+        contactgroup_name       dbAdmins
+        alias                   Linux dbAdmins
+        members                 Bob
+}
