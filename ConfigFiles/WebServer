@@ -1,0 +1,67 @@
+define host {
+        use                     linux-server
+        host_name               webServer
+        alias                   webSrv
+        address                 35.175.130.159
+        contact_groups          webServerAdmins
+}
+
+
+
+define hostgroup {
+        hostgroup_name          linux-web-servers
+        alias                   Linux web Servers
+        members                 webServer
+}
+
+
+
+define service {
+        use                     generic-service
+        host_name               webServer
+        service_description     Web Server Check
+        check_command           check_http
+        check_period            24x7
+        check_interval          5
+        max_check_attempts      2
+        contact_groups          webServerAdmins
+        flap_detection_enabled  1
+        notification_interval   60
+        notification_period     24x7
+        notification_options    w,c,u,r
+        notifications_enabled   1
+}
+
+
+
+define contact {
+        contact_name                    Bob
+        use                             generic-contact
+        alias                           Web Server Adminstrator
+        email                           fuafuark@gmail.com
+        service_notification_commands   notify-service-by-email
+        host_notification_commands      notify-host-by-email
+        contact_groups                  webServerAdmins
+        service_notification_options    w,c,u
+}
+
+
+
+define contact {
+        contact_name                    Terry
+        use                             generic-contact
+        alias                           Web Server Adminstrator
+        email                           ibiliaze@gmail.com
+        service_notification_commands   notify-service-by-email
+        host_notification_commands      notify-host-by-email
+        contact_groups                  webServerAdmins
+        service_notification_options    u
+}
+
+
+
+define contactgroup {
+        contactgroup_name       webServerAdmins
+        alias                   Linux webAdmins
+        members                 Bob, Terry
+}
