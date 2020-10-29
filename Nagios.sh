@@ -7,5 +7,6 @@ sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg #pre-fligh
 
 
 
-
+[ Logs ]
+tail /usr/local/nagios//var/nagios.log -f
 

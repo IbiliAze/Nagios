@@ -1,0 +1,8 @@
+[ /usr/local/nagios/etc/objects/commands.cfg ]
+ 
+define command {
+    command_name    notify-service-by-email-gmail
+    command_line    sendemail -u NAGIOS NOTIFICATION -m "$NOTIFICATIONTYPE$ Service Alert: $HOSTALIAS$/$SERVICEDESC$ is $SERVICESTATE$" -s smtp.googlemail.com:587 -xu user1 -xp password1 -o tls=yes -f email@gmail.com -t $CONTACTEMAIL$
+}
+
+

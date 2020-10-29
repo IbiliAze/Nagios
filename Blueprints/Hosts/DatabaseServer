@@ -4,4 +4,5 @@ define host {
         alias                   dbSrv
         address                 18.208.128.70
         contact_groups          dbAdmins
+        notifications_enabled   1
 }
