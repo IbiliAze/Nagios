@@ -1,0 +1,15 @@
+define service {
+        use                     generic-service
+        host_name               webServer
+        service_description     Web Server Check
+        check_command           check_http
+        check_period            24x7
+        check_interval          1
+        max_check_attempts      2
+        contact_groups          webServerAdmins
+        flap_detection_enabled  0
+        notification_interval   1
+        notification_period     24x7
+        notification_options    w,c,u,r
+        notifications_enabled   1
+}

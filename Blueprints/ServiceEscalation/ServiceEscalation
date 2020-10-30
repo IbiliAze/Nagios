@@ -1,0 +1,17 @@
+define serviceescalation {
+        host_name                       webServer
+        service_description             Web Server Check
+        first_notification              3
+        last_notification               5
+        notification_interval           1
+        contact_groups                  level_1
+}
+
+define serviceescalation {
+        host_name                       webServer
+        service_description             Web Server Check
+        first_notification              4
+        last_notification               6
+        notification_interval           1
+        contact_groups                  level_2
+}i
