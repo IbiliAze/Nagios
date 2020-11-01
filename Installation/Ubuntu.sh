@@ -123,7 +123,16 @@ sudo systemctl enable apache2
 echo step 35
 sudo systemctl status apache2
 
+echo step 36 
+sudo apt install -y nagios-nrpe-plugin
+sudo apt install -y nagios-nrpe-server
+sudo apt install -y nagios-plugins
 
+echo step 37
+sudo systemctl start nagios-nrpe-server
+
+echo step 38
+sudo systemctl enable nagios-nrpe-server
 
 
 
